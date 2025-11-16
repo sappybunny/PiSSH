@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <!-- binding object of ViewModel to the XML layout -->
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.pissh.viewmodels.ConnectionDetailsViewModel" />
+    </data>
+
+    <!-- Provided Linear layout for the activity components -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <!-- EditText field for the Email -->
+        <EditText
+            android:id="@+id/inEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:autofillHints="email..."
+            android:hint="@string/enter_your_email_id"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:padding="8dp"
+            android:text=""
+            android:textColorHint="#8D6E63"
+            bind:ignore="VisualLintTextFieldSize" />
+
+        <!-- EditText field for the password -->
+        <EditText
+            android:id="@+id/inPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:autofillHints="password..."
+            android:hint="@string/enter_your_password"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:padding="8dp"
+            android:text=""
+            android:textColorHint="#8D6E63" />
+
+        <!-- Login Button of the activity -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/login"
+            android:textSize="24sp"
+            bind:toastMessage="" />
+
+    </LinearLayout>
+</layout>
